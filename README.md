@@ -1,2 +1,2 @@
 # Java-learning from Apana College
-### All Assingment are in which folder those name start form assingment
+### All Assignment are in which folder those name start form assignment
