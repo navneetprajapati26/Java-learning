@@ -71,17 +71,50 @@ public class twoD {
         System.out.println();
     }
 
+    public static void diagonalSum(int mat[][]) {
+        int pD = 0, sD = 0;
+
+        // O(n^2)
+        // for (int i = 0; i < mat.length; i++) {
+        // for (int j = 0; j < mat[0].length; j++) {
+        // if (i == j) {
+        // pD += mat[i][j];
+        // } else if (i + j == mat.length - 1) {
+        // if (i == j) {
+        // continue;
+        // } else {
+        // sD += mat[i][j];
+        // }
+        // }
+        // }
+        // }
+        // int sumD = sD+pD;
+
+        // O(n)
+        int sumD = 0;
+        for (int i = 0; i < mat.length; i++) {
+            // pD
+            sumD += mat[i][i];
+
+            if (i != mat.length - 1 - i) {
+                sumD += mat[i][mat.length - 1 - i];
+            }
+        }
+        System.out.println("sum of diagonel is " + sumD);
+    }
+
     public static void main(String[] args) {
         // int mat[][] = new int[4][3];
         // maricx(mat);
 
-        int matrix[][] = { { 1, 2, 3, 4, 5 },
-                { 6, 7, 8, 9, 10 },
-                { 11, 12, 13, 14, 15 },
-                { 16, 17, 18, 19, 20 },
-                { 21, 22, 23, 24, 25 },
+        int matrix[][] = {
+                { 1, 2, 3, 4 },
+                { 5, 6, 7, 8 },
+                { 9, 10, 11, 12 },
+                { 13, 14, 15, 16 }
         };
-        printSpiral(matrix);
+        // printSpiral(matrix);
+        diagonalSum(matrix);
     }
 
 }
