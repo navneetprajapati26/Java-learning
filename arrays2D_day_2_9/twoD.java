@@ -103,6 +103,24 @@ public class twoD {
         System.out.println("sum of diagonel is " + sumD);
     }
 
+    public static void staireSearch(int mat[][], int key) {
+        int row = 0, col = mat[0].length - 1;
+
+        while (row < mat.length && col >= 0) {
+            if (key == mat[row][col]) {
+                System.out.println("key is at index:- " + "[ " + row + " " + col + " ]");
+                break;
+            } else if (key < mat[row][col]) {
+                col--;
+            } else {
+                row++;
+            }
+            System.out.println("not found");
+
+        }
+
+    }
+
     public static void main(String[] args) {
         // int mat[][] = new int[4][3];
         // maricx(mat);
@@ -113,8 +131,10 @@ public class twoD {
                 { 9, 10, 11, 12 },
                 { 13, 14, 15, 16 }
         };
+        int key = 10;
         // printSpiral(matrix);
         diagonalSum(matrix);
+        staireSearch(matrix, key);
     }
 
 }
