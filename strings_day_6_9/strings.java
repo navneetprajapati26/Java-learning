@@ -1,6 +1,14 @@
 package strings_day_6_9;
 
+import java.util.Scanner;
+
 public class strings {
+
+    public static void printString(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            System.out.print(str.charAt(i) + " ");
+        }
+    }
 
     public static void main(String[] args) {
         char arr[] = { 'a', 'b', 'c', 'd', 'e' };
@@ -12,6 +20,29 @@ public class strings {
 
         // **imp
         // Strings are I M M U T A B L E
+
+        // ### input / output in String ###
+        Scanner sc = new Scanner(System.in);
+        // String name;
+
+        // "next()" take only one word "nextLine()" take all line
+
+        // name = sc.nextLine();
+
+        // " .length()" give use number of charechtor in the string
+        // System.out.println(name + " length of intered word is " + name.length());
+
+        // Concatenation
+        String firstName = "NAVNEET";
+        String lastNAme = "UJALA";
+
+        String nameOflove = firstName + " " + lastNAme;
+        System.out.println(nameOflove);
+
+        // charector of Strinig
+        System.out.println(lastNAme.charAt(0) + " love " + firstName.charAt(0));
+        printString(lastNAme);
+
     }
 
 }
