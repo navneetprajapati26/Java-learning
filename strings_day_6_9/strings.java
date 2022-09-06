@@ -10,13 +10,31 @@ public class strings {
         }
     }
 
+    public static void palindrome(String str) {
+
+        boolean palindrome = false;
+
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
+                palindrome = true;
+
+            }
+        }
+
+        if (palindrome == true) {
+            System.out.println(str + " is a palindrome");
+        } else {
+            System.out.println(str + " is not a palindrome");
+        }
+    }
+
     public static void main(String[] args) {
         char arr[] = { 'a', 'b', 'c', 'd', 'e' };
 
         // ############# String declration
-        String str = "abcde";
+        // String str = "abcde";
         // OR
-        String str2 = new String("abcde");
+        // String str2 = new String("abcde");
 
         // **imp
         // Strings are I M M U T A B L E
@@ -36,12 +54,14 @@ public class strings {
         String firstName = "NAVNEET";
         String lastNAme = "UJALA";
 
-        String nameOflove = firstName + " " + lastNAme;
-        System.out.println(nameOflove);
+        // String nameOflove = firstName + " " + lastNAme;
+        // System.out.println(nameOflove);
 
         // charector of Strinig
-        System.out.println(lastNAme.charAt(0) + " love " + firstName.charAt(0));
-        printString(lastNAme);
+        // System.out.println(lastNAme.charAt(0) + " love " + firstName.charAt(0));
+        // printString(lastNAme);
+        String str = sc.nextLine();
+        palindrome(str);
 
     }
 
