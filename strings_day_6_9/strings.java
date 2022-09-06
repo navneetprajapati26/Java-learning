@@ -28,8 +28,28 @@ public class strings {
         }
     }
 
+    public static void sortestDis(String str) {
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'w') {
+                x += -1;
+            } else if (str.charAt(i) == 'e') {
+                x += +1;
+            } else if (str.charAt(i) == 's') {
+                y += -1;
+            } else if (str.charAt(i) == 'n') {
+                y += 1;
+            }
+        }
+        int a = (int) Math.pow(x, 2) + (int) Math.pow(y, 2);
+
+        int sD = (int) Math.sqrt(a);
+        System.out.println(sD);
+    }
+
     public static void main(String[] args) {
-        char arr[] = { 'a', 'b', 'c', 'd', 'e' };
+        // char arr[] = { 'a', 'b', 'c', 'd', 'e' };
 
         // ############# String declration
         // String str = "abcde";
@@ -61,7 +81,8 @@ public class strings {
         // System.out.println(lastNAme.charAt(0) + " love " + firstName.charAt(0));
         // printString(lastNAme);
         String str = sc.nextLine();
-        palindrome(str);
+        // palindrome(str);
+        sortestDis(str);
 
     }
 
