@@ -144,8 +144,8 @@ public class strings {
         // sortestDis(str);
         // subString(str, 2, 3);
         // System.out.println(str.substring(2, 3));
-        lxicalLarg();
-        impQus_toUpperCase(str);
+        // lxicalLarg();
+        // impQus_toUpperCase(str);
         impQus_compretionStr(str);
 
     }
