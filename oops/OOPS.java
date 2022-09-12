@@ -7,13 +7,31 @@ public class OOPS {
         System.out.println(p1.coler);
         p1.setTip(5);
         System.out.println(p1.tip);
+
+        BankAccount myAcc = new BankAccount();
+        myAcc.userName = "ujala yadav";
+        myAcc.setPassword("navneet");
+
     }
 }
 
+class BankAccount {
+
+    public String userName;
+    private String password;
+
+    public void setPassword(String pwd) {
+        this.password = pwd;
+    }
+
+}
+
 class Pan {
+    // Attributes of class
     String coler;
     int tip;
 
+    // Behaviors of class
     void setColer(String newColor) {
         coler = newColor;
     }
