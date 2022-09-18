@@ -12,6 +12,7 @@ public class arrays {
         }
     }
 
+    // ### 2
     public static void getLargSmal(int[] arr) {
         int largest = Integer.MIN_VALUE;
         int smalestm = Integer.MAX_VALUE;
@@ -28,11 +29,31 @@ public class arrays {
         System.out.println("smalestm " + smalestm);
     }
 
+    // ### 3
+    public static void binarySharch(int[] arr, int kay) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == kay) {
+                System.out.println(kay + " is at " + mid);
+                break;
+            } else if (arr[mid] < kay) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+
+        }
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 2, 1, 3, 4 };
-        int kay = 2;
+        int arr[] = { 1, 2, 31, 41, 52, 68, 91 };
+        int kay = 41;
         // linerSharch(arr, kay);
-        getLargSmal(arr);
+        // getLargSmal(arr);
+        binarySharch(arr, kay);
+
     }
 
 }
