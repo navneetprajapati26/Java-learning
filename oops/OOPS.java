@@ -8,20 +8,114 @@ public class OOPS {
         p1.setTip(5);
         // System.out.println(p1.tip);
 
-        // Accese modifir
+        // 1 Accese modifir
         BankAccount myAcc = new BankAccount();
         myAcc.userName = "ujala yadav";
         myAcc.setPassword("navneet");
 
-        // getter & setter
+        // 2 getter & setter
         Notes myNote = new Notes();
         myNote.setNote("ujju");
         String n1 = myNote.getNote();
-        System.out.println(n1);
+        // System.out.println(n1);
+
+        // 3 Constructors
+
+        // non-parametrized
+
+        // Teacher t1 = new Teacher();
+
+        // paramtrized
+
+        // Teacher t2 = new Teacher("raju");
+        // Teacher t3 = new Teacher(3);
+
+        // copy constructor
+
+        // Teacher t4 = new Teacher();
+        // t4.name = "aamod";
+        // t4.id = 3;
+        // t4.password = 123;
+
+        // Teacher t5 = new Teacher(t4);
+        // t5.password = 98;
+
+        // 4 Inheritance
+
+        Fish shark = new Fish();
+        // come from base class
+        shark.eat();
+        shark.breathe();
+        // come from subclass
+        shark.swim();
+
     }
 }
 
-// getter & setter & this -> for rifrens
+// 4 Inheritance
+
+// (Inheritance have tow things first base class and second is derived class,
+// derived class use base class proparties )
+
+// Inheritance (base class)
+
+class Animal {
+    String color;
+
+    void eat() {
+        System.out.println("eats");
+    }
+
+    void breathe() {
+        System.out.println("breathes");
+    }
+}
+
+// Inharitance (derived class / sub class)
+
+class Fish extends Animal {
+    int fins;
+
+    void swim() {
+        System.out.println("swims in water");
+    }
+}
+
+// 3 Constructors
+class Teacher {
+    String name;
+    int id;
+    int password;
+    int marks[];
+
+    // Constructors if you not initlis is it is by difolt
+
+    // Non-Parameterized Constructor
+    Teacher() {
+        System.out.println(name);
+    }
+
+    // Parameterized Constructor
+    Teacher(String name) {
+        this.name = name;
+        System.out.println(name);
+    }
+
+    Teacher(int id) {
+        this.id = id;
+        System.out.println(id);
+    }
+
+    // Copy Constroctor
+    Teacher(Teacher a) {
+        this.name = a.name;
+        this.id = a.id;
+
+    }
+
+}
+
+// 2 getter & setter & this -> for rifrens
 class Notes {
     private String note;
 
@@ -34,7 +128,7 @@ class Notes {
     }
 }
 
-// Accese modifir
+// 1 Accese modifir
 class BankAccount {
 
     public String userName;
