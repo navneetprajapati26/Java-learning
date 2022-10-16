@@ -31,9 +31,13 @@ public class linear_sarch {
 
     // #### binery sharch ####
     public static int binSharch(int arr[], int key) {
+
+        // {2,5,6,8} find 6
+
         int start = 0, end = arr.length - 1;
 
         while (start <= end) {
+
             int mid = (start + end) / 2;
 
             // comparisons
