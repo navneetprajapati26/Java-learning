@@ -49,8 +49,17 @@ public class OOPS {
         // come from subclass
         shark.swim();
 
+        //multi laval Inheritance
+        Dog dogy =new Dog();
+        dogy.breed = "hbhjh";
+        dogy.color ="safed"
+
+
+
     }
 }
+
+// 5 Polymorphism
 
 // 4 Inheritance
 
@@ -73,6 +82,7 @@ class Animal {
 
 // Inharitance (derived class / sub class)
 
+// this is exampel of single level Inheritance
 class Fish extends Animal {
     int fins;
 
@@ -80,6 +90,17 @@ class Fish extends Animal {
         System.out.println("swims in water");
     }
 }
+
+// multi leval inharitance
+class Mamals extends Animal {
+    int lages;
+}
+
+class Dog extends Mamals {
+    String breed;
+}
+
+// Hybrid Inheritance
 
 // 3 Constructors
 class Teacher {
