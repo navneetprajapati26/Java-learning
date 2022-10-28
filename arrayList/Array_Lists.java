@@ -44,7 +44,7 @@ public class Array_Lists {
         System.out.println(a);
 
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(i + " ");
+           // System.out.print(i + " ");
         }
         System.out.println("Rivors if List");
         // revorse trversing of ArryList
