@@ -2,8 +2,6 @@ package arrayList;
 
 import java.util.*;
 
-//import strings_day_6_9.strings;
-
 public class Array_Lists_2D {
     public static void main(String[] args) {
 
@@ -52,7 +50,7 @@ public class Array_Lists_2D {
         }
     }
 
-    // Imp. Qus. # max water
+    // Imp. Qus. # max water TC O(n^2)
     public static int maxWater(ArrayList<Integer> hight) {
         int maxWater = 0;
         for (int i = 0; i < hight.size(); i++) {
@@ -65,8 +63,33 @@ public class Array_Lists_2D {
         }
         return maxWater;
     }
-    // Imp. Qus. # max water implimantetion
 
+    // Imp. Qus. # max water tow pointer approch TC O(n)
+    public static int maxWAter_tow_pointer_approch(ArrayList<Integer> hight) {
+        int maxWater = 0;
+        int lp = 0;
+        int rp = hight.size() - 1;
+
+        while (lp < rp) {
+
+            // water
+            int h = Math.min(hight.get(lp), hight.get(rp));
+            int w = rp - lp;
+            int currWater = h * w;
+            maxWater = Math.max(maxWater, currWater);
+
+            // update pointer
+            if (hight.get(lp) < hight.get(rp)) {
+                lp++;
+            } else {
+                rp--;
+            }
+
+        }
+        return maxWater;
+    }
+
+    // Imp. Qus. # max water implimantetion
     public static void maxWaterImp() {
         ArrayList<Integer> hight = new ArrayList<>();
         // 1 8 6 2 5 4 8 3 7
@@ -80,5 +103,6 @@ public class Array_Lists_2D {
         hight.add(3);
         hight.add(7);
         System.out.println("Max Water is " + maxWater(hight));
+        System.out.println("Max Water is " + maxWAter_tow_pointer_approch(hight));
     }
 }
