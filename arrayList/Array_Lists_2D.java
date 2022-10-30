@@ -2,6 +2,8 @@ package arrayList;
 
 import java.util.*;
 
+//import strings_day_6_9.strings;
+
 public class Array_Lists_2D {
     public static void main(String[] args) {
 
@@ -31,9 +33,11 @@ public class Array_Lists_2D {
         mainList.add(list2);
         mainList.add(list3);
 
-        System.out.println(mainList);
+        // System.out.println(mainList);
         // travertion of 2D Array list
-        TrevIn2D(mainList);
+        // TrevIn2D(mainList);
+
+        maxWaterImp();
 
     }
 
@@ -46,5 +50,35 @@ public class Array_Lists_2D {
             }
             System.out.println();
         }
+    }
+
+    // Imp. Qus. # max water
+    public static int maxWater(ArrayList<Integer> hight) {
+        int maxWater = 0;
+        for (int i = 0; i < hight.size(); i++) {
+            for (int j = i + 1; j < hight.size(); j++) {
+                int h = Math.min(hight.get(i), hight.get(j));
+                int w = j - i;
+                int currWater = h * w;
+                maxWater = Math.max(maxWater, currWater);
+            }
+        }
+        return maxWater;
+    }
+    // Imp. Qus. # max water implimantetion
+
+    public static void maxWaterImp() {
+        ArrayList<Integer> hight = new ArrayList<>();
+        // 1 8 6 2 5 4 8 3 7
+        hight.add(1);
+        hight.add(8);
+        hight.add(6);
+        hight.add(2);
+        hight.add(5);
+        hight.add(4);
+        hight.add(8);
+        hight.add(3);
+        hight.add(7);
+        System.out.println("Max Water is " + maxWater(hight));
     }
 }
