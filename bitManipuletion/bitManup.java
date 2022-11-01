@@ -39,5 +39,14 @@ public class bitManup {
         // 6= 110
         // ----------
         // result 011
+
+        // # importent Bit Wise 'Binary One's Complement' optreter
+        // ~0 = 1
+        // ~1 = 0
+
+        System.out.println("Bit Wise Binary One's Complement optreter " + (~5));
+        // 5= 101
+        // ~5= 010
+
     }
 }
