@@ -35,7 +35,8 @@ public class Array_Lists_2D {
         // travertion of 2D Array list
         // TrevIn2D(mainList);
 
-        maxWaterImp();
+        // maxWaterImp();
+        pairSumImp();
 
     }
 
@@ -112,7 +113,28 @@ public class Array_Lists_2D {
             for (int j = i + 1; j < list.size(); j++) {
                 if (list.get(i) + list.get(j) == target) {
                     return true;
+
                 }
+            }
+        }
+        return false;
+
+    }
+
+    // Imp. Qus. # pair sum tow pointer approch
+    public static boolean pairSum_TowPointerApproch(ArrayList<Integer> list, int target) {
+        int lp = 0;
+        int rp = list.size() - 1;
+        while (lp != rp) {
+            // case 1
+            if (list.get(lp) + list.get(rp) == target) {
+                return true;
+            }
+            // case 2
+            else if (list.get(lp) + list.get(rp) < target) {
+                lp++;
+            } else {
+                rp--;
             }
         }
         return false;
@@ -132,7 +154,8 @@ public class Array_Lists_2D {
         list.add(3);
         list.add(7);
         System.out.println(pairSum(list, 9));
-        // System.out.println("Max Water is " + maxWAter_tow_pointer_approch(hight));
+        System.out.println(pairSum_TowPointerApproch(list, 5));
+
     }
 
 }
