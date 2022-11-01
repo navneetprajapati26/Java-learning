@@ -4,7 +4,7 @@ import java.util.*;
 
 public class bitManup {
     public static void main(String[] args) {
-        // # importent Bit Wise 'AND' optreter
+        // # importent Bit Wise 'AND (&)' optreter
         // 0 & 0 = 0
         // 0 & 1 = 0
         // 1 & 0 = 0
