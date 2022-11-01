@@ -52,5 +52,8 @@ public class bitManup {
         // # " a<<b = a*2^b ""
         System.out.println("Binary Left Shift << " + (5 << 2));
 
+        // # Very IMP 'Binary Right Shift >>'
+        // # " a>>b = a/2^b ""
+        System.out.println("Binary Right Shift (>>) " + (6 >> 1));
     }
 }
