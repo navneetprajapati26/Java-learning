@@ -1,6 +1,6 @@
 package arrayList;
 
-import java.util.*;;
+import java.util.*;
 
 // # Dynamic size
 // # Primitiv data type can't be stored directly
