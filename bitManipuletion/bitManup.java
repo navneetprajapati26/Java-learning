@@ -27,5 +27,17 @@ public class bitManup {
         // 6= 110
         // ----------
         // result 111
+
+        // # importent Bit Wise 'XOR (^)' optreter
+        // 0 ^ 0 = 0
+        // 0 ^ 1 = 1
+        // 1 ^ 0 = 1
+        // 1 ^ 1 = 0
+        System.out.println("Bit Wise 'XOR (^)' optreter " + (5 ^ 6));
+        // 5 ^ 6,
+        // 5= 101
+        // 6= 110
+        // ----------
+        // result 011
     }
 }
