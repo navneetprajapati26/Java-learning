@@ -9,7 +9,7 @@ public class bitManup {
         // 0 & 1 = 0
         // 1 & 0 = 0
         // 1 & 1 = 1
-        System.out.println(5 & 6);
+        System.out.println("Bit Wise 'AND (&)' optreter" + (5 & 6));
         // 5 % 6,
         // 5= 101
         // 6= 110
