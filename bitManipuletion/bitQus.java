@@ -94,6 +94,22 @@ public class bitQus {
         return count;
     }
 
+    // # Qus 4
+    // Fast Exponentiation
+
+    public static int FastExpo(int a, int n) {
+        int ans = 1;
+
+        while (n > 0) {
+            if ((n & 1) != 0) {// check LSB
+                ans = ans * a;
+            }
+            a = a * a;
+            n = n >> 1;
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         // Qus 1
         evenOdd(5);
@@ -122,6 +138,10 @@ public class bitQus {
 
         // Qus 3
         System.out.println("no. of Set in 10 : " + countOfSet(10));
+
+        // Qus 4
+        System.out.println("First Expo " + FastExpo(5, 3));
+
     }
 
 }
