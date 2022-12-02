@@ -49,17 +49,94 @@ public class OOPS {
         // come from subclass
         shark.swim();
 
-        //multi laval Inheritance
-        Dog dogy =new Dog();
+        // multi laval Inheritance
+        Dog dogy = new Dog();
         dogy.breed = "hbhjh";
-        dogy.color ="safed"
+        dogy.color = "safed";
+        // 5 Polymorphism
 
+        // i) Methord Overloding
+        Calculatore cal = new Calculatore();
+        int s1 = cal.sum(1, 2);
+        float s2 = cal.sum((float) 1.2, (float) 2.1);
+        int s3 = cal.sum(1, 2, 3);
+        // System.out.println(s2);
+        // ii) Method Overwriting
+        Deer hiran = new Deer();
+        hiran.eat();
 
+        // 6 Abstract class
+
+        RadMonky m1 = new RadMonky();
+        m1.eat();
+        m1.walk();
+        System.out.println(m1.color);
+
+        BlackMonky m2 = new BlackMonky();
+        m2.eat();
+        m2.walk();
 
     }
 }
 
+// 6 Abstract class
+
+abstract class Monky {
+    String color;
+
+    Monky() {
+        color = "brown";
+    }
+
+    void eat() {
+        System.out.println("Monky eat lifs");
+    }
+
+    abstract void walk();
+}
+// subclass of monky
+
+class RadMonky extends Monky {
+    void walk() {
+        System.out.println("RadMonky walk");
+    }
+}
+
+class BlackMonky extends Monky {
+    void walk() {
+        System.out.println("BlackMonky walk");
+    }
+}
+
 // 5 Polymorphism
+
+// i) Method Overloding
+class Calculatore {
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    float sum(float a, float b) {
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+// ii) Method Overwriting
+class Janwar {
+    void eat() {
+        System.out.println("eat anything");
+    }
+}
+
+class Deer extends Janwar {
+    void eat() {
+        System.out.println("eat grass");
+    }
+}
 
 // 4 Inheritance
 
