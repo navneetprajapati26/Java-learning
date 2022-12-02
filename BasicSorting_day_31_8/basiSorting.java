@@ -72,26 +72,45 @@ public class basiSorting {
         // printArr(arr);
     }
 
+    public static void unusual(int[] arr) {
+        int N = arr.length;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (arr[i] < arr[j]) {
+                    int tamp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tamp;
+                }
+            }
+        }
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(" " + arr[i] + " ");
+        }
+        System.out.print("]");
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int arr[] = new int[a];
+        // int a = sc.nextInt();
+        // int arr[] = new int[a];
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
+        // for (int i = 0; i < arr.length; i++) {
+        // arr[i] = sc.nextInt();
+        // }
 
-        Integer arra[] = { 5, 3, 4, 1, 2 };
+        int arra[] = { 3, 4, 1 };
 
-        printArr(arra);
+        // printArr(arra);
         // System.out.println();
         // selectionSort(arr);
         // System.out.println();
         // insertionSort(arr);
         // System.out.println();
         // Arrays.sort(arr);
-        Arrays.sort(arra, Collections.reverseOrder());
-        printArr(arra);
+        // Arrays.sort(arra, Collections.reverseOrder());
+        // printArr(arra);
+        unusual(arra);
 
     }
 }
