@@ -169,7 +169,7 @@ class Fish extends Animal {
 }
 
 // multi leval inharitance
-class Mamals extends Animal {
+  class Mamals extends Animal {
     int lages;
 }
 
