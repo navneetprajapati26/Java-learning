@@ -73,4 +73,15 @@ package bitManipuletion;
          }
      }
 
+     // todo: Q 6.) Check if the number is a power of 2?
+     public  void  isPowerOf2(int n){
+         int bitMask = (n-1);
+         if((n&bitMask) == 0){
+             System.out.println("it is power of tow");
+         }
+         else {
+             System.out.println("it is not a power of tow");
+         }
+     }
+
 }

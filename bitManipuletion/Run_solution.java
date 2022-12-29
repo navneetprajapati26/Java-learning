@@ -13,6 +13,7 @@ public class Run_solution {
         //q.even_or_odd(5);
         //q.usingdivMod(5);
         //q.using_rs_ls(5);
+        q.isPowerOf2(4);
     }
 }
 
